@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin:2em;
+    
+}
+.slider-container {
+    height: auto;
+    width: 20%;
+    background-color: #02D8D8;
+    font-family: 'Miniver', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+.slider-logo{
+font-size: 2em;
+color: azure;
+padding-left: .5em;
+
+}
+.slider-burger{
+    padding-right: .5em;
+    color: azure;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.slider-title{
+    color: azure;
+    font-size: 1.8em;
+    margin-left: 3em;
+    text-decoration-line: underline;
+    margin-bottom: 3em;
+}
