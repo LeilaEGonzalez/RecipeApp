@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  min-width: fit-content;
+  background-image:url(/marble.jfif);
+  visibility: 50%;
+  scroll-behavior: smooth;
+}
+nav {
+    width: 100%;
+    height: 4em;
+  }
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .burger {
+    width: 1.5em;
+    height: 1.1em;
+    margin: 1em 2em;
+    cursor: pointer;
+  }
+  .nav-title {
+    font-family: 'Miniver', cursive;;
+    padding-top: 0.5em;
+    padding-left: .1em;
+    color: #2EC0C0;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nav-corner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  button {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1.5px;
+    padding: 0.5em;
+    box-shadow: 4px 4px 12px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 41px;
+    border-style: none;
+    margin: 1em 3em;
+    cursor: pointer;
+  }
+  .add-recipe {
+    font-family: "Montserrat", sans-serif;
+    color: azure;
+    background-color: rgb(224, 108, 0);
+    text-align: center;
+    font-weight: 500;
+  }
+
+.recipe-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-content: center;
+    margin-top: 1em;
+}
+.soup-img{
+    margin-left: 5em;
+    width: 35%;
+    height: 53em;
+}
+.text-container{
+    width: 40%;
+}
+
+.title-recipe{
+    font-family: 'Miniver', cursive;
+    font-size: 3em;
+    color: #C02E2E;
+    margin-left: 5.5em;
+}
+.ingredients-title, .instructions-title {
+    font-family: 'Miniver', cursive;
+    font-size: 2em;
+    color: #505050;
+    margin-bottom: 1.5em;
+}
+.ingredients-list{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+height: 100px;
+align-items: right;
+font-family: "Montserrat", sans-serif;
+color:#757575
+}
+.each-ing{
+    margin-bottom: .5em;
+    list-style: square;
+
+}
+.instructions-title{
+    margin-top: 1em;
+}
+.instructions-description{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}

@@ -1,50 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
 }
+
+
+.slider-container {
+    height:100%;
+    width: 20%;
+    position: fixed;
+    background-color: #02D8D8;
+    font-family: 'Miniver', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
 .logo-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin:2em;
-    
-}
-.slider-container {
-    height: auto;
-    width: 20%;
-    background-color: #02D8D8;
-    font-family: 'Miniver', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items: center;
-}
-.slider-logo{
-font-size: 2em;
-color: azure;
-padding-left: .5em;
+    margin: 2.5em 5.5em;
+    cursor: pointer;
 
 }
-.slider-burger{
-    padding-right: .5em;
+.slider-logo {
+    font-size: 2em;
+    color: azure;
+    
+}
+
+.slider-burger {
     color: azure;
     width: 2.5em;
     height: 2.5em;
 }
 
-.slider-title{
+.slider-title {
     color: azure;
     font-size: 1.8em;
     margin-left: 3em;
     text-decoration-line: underline;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
+
+ul .slider-opts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    color: azure;
+    font-size: 1.5em;
+    margin: 2em 3.5em;
+    cursor: pointer;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: azure;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: azure;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
