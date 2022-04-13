@@ -7,19 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/stylesheet.css" />
     <link rel="stylesheet" href="/assets/add-recipe-style-form.css" />
-    <link rel="stylesheet" href="/assets/slider-style.css" />
+    <!-- <link rel="stylesheet" href="/assets/slider-style.css" /> -->
     <title>Recipe App</title>
 </head>
 
 <body>
     <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-corner">
-                <img id="burger-btn" class="burger" src="/assets/img/burger.svg" alt="burger icon">
-                <p class="nav-title">Recipe App</p>
+        <div class="nav-title">Recipe App</div>
+        <div class="nav-toggle">
+            <div class="nav-toggle-bar"></div>
+            <div class="nav-corner" id="burger-btn">
+                <ul>
+                    <li><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
+                    <li><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
+                    <li><a href="/recipes/recipe3.html">Ratatouille</a></li>
+                </ul>
             </div>
-            <button id="add-btn" class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
         </div>
+        <button id="add-btn" class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
     </nav>
     <main>
         <div class="container">

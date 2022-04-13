@@ -62,39 +62,22 @@ const form = `    <div id="overlay"></div>
     </div>
 </div>`;
 
-sliderBurger.addEventListener("click", event => {
-    event.preventDefault();
-    openNav();
-    sliderHTML();
-    closeNav();
-});
-const html = `<div class="slider-container">
-<div class="slider-square">
-   <div class="logo-container">
-    <img onclick="closeNav()"id="close-slider" class="exit" src="/assets/img/exit.svg" alt="cross exit">
-    </div>
-    <div class="slider-title">Our Recipes</div>
-    <ul class="slider-opts">
-        <a href="/recipes/recipe1.html" class="recipe hover-underline-animation">Mushroom Soup</a>
-        <a href="/recipes/recipe2.html" class="recipe hover-underline-animation">Croatian Bean Stew</a>
-        <a href="/recipes/recipe3.html" class="recipe hover-underline-animation">Ratatouille</a>
-
-    </div>
-</div>
-</div>`
-
-const sliderHTML = () => {
-    document.body.innerHTML = html;
-}
 
 
-const openNav = () => {
-    sliderBurger.style.width = "20%";
-}
 
-const closeNav = () => {
-    sliderBurger.style.width = "0";
-}
+(function() {
+    var hamburger = {
+      navToggle: document.querySelector('.nav-toggle'),
+      nav: document.querySelector('nav-corner'),
+      doToggle: function(e) {
+        e.preventDefault();
+        this.navToggle.classList.toggle('expanded');
+        this.nav.classList.toggle('expanded');
+      }
+    };
+    hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+    hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  }());
 
 modalForm.addEventListener("submit", event => {
     event.preventDefault();
