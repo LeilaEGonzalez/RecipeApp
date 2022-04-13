@@ -1,16 +1,15 @@
-const form = document.querySelector("#form");
-const titleForm = document.querySelector("#title-form");
-const sourceForm = document.querySelector("#source-form");
-const pictureForm = document.querySelector("#picture-form");
-const ingredientsForm = document.querySelector("#ingredients-form");
+export const titleForm = document.querySelector("#title-form");
+export const sourceForm = document.querySelector("#source-form");
+export const pictureForm = document.querySelector("#picture-form");
+export const ingredientsForm = document.querySelector("#ingredients-form");
 
-form.addEventListener("submit", event => {
-    event.preventDefault();
+// modalForm.addEventListener("submit", event => {
+//     event.preventDefault();
 
-    checkInputs();
-})
+//     checkInputs();
+// })
 
-const checkInputs = () => {
+export const checkInputs = () => {
     const titleValue = titleForm.value.trim();
     const sourceValue = sourceForm.value.trim();
     const ingredientsValue = ingredientsForm.value.trim();
@@ -38,14 +37,14 @@ const checkInputs = () => {
 
 }
 
-const setErrorFor = (input, message) => {
+export const setErrorFor = (input, message) => {
     const formBox = input.parentElement;
     const small = formBox.querySelector('small');
     small.innerText = message;
     formBox.className = 'form-box error'
 };
 
-const setSuccessFor = (input) => {
+export const setSuccessFor = (input) => {
     const formBox = input.parentElement;
     formBox.className = 'form-box success'
 }

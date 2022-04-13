@@ -1,78 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 
-*{
-    box-sizing: border-box;
 
-}
 
-body{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    
-}
-
-.modal-container{
+.modal-container {
     position: fixed;
     background-color: #FFF9F3;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    width: 600px;
+    display: block;
+    width: 25%;
+    top: 17vh;
+    left: 70vh;
     border-radius: 1em;
-    max-width: 100%;
-    height: 600px;
+    height: 60%;
     z-index: 10;
 
 }
 
-.modal-header{
+.modal-header {
     margin: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-        
+    align-items: center;
+
 }
-.title{
+
+.modal-title {
     font-family: 'Miniver', cursive;
     text-decoration-line: underline;
     font-size: 2.3em;
-    margin: 0 .5em;
+    margin: .5em 2em;
+    width: 100%;
 }
 
-.modal-header .close-button{
+.close-button {
     cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    box-shadow: none;
     font-size: 2em;
     font-weight: 600;
+    margin: .5em;
+
 }
 
-.modal-body{
+.modal-body {
     padding: 0 2.1em;
 }
 
-.form-box{
+.form-box {
     margin-bottom: 1em;
     position: relative;
-    padding-bottom: 1em;
 
 }
 
-.form-box label{
+.form-box label {
     font-family: 'Miniver', cursive;
     font-size: 1.3em;
     display: inline-block;
+    margin-right: 110em;
     margin-bottom: .3em;
-    
+
 }
 
-.form-box input{
+.form-box input {
     display: block;
     border: 1px solid #a1a1a1 !important;
     border-radius: .4em;
@@ -83,61 +75,66 @@ body{
     box-shadow: none !important;
     width: 100%;
     padding: .5em;
-    
+
 }
 
-.form-box.success input{
-    border-color:rgb(7, 221, 0);
+.form-box.success input {
+    border-color: rgb(7, 221, 0);
 }
 
-.form-box.error input{
+.form-box.error input {
     border-color: crimson;
 }
 
-.form-box i{
+.form-box i {
     visibility: hidden;
     position: absolute;
     top: 2.8em;
     right: .8em;
 }
 
-.form-box.success i.fa-circle-check{
-    color:rgb(7, 221, 0);
-    visibility: visible;
-}
-.form-box.error i.fa-circle-exclamation{
-    color:crimson;
+.form-box.success i.fa-circle-check {
+    color: rgb(7, 221, 0);
     visibility: visible;
 }
 
-.form-box small{
+.form-box.error i.fa-circle-exclamation {
+    color: crimson;
+    visibility: visible;
+}
+
+.form-box small {
     visibility: hidden;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
 }
-.form-box.error small{
-    color:crimson;
+
+.form-box.error small {
+    color: crimson;
     visibility: visible;
 }
 
 
-.form-box i{
+.form-box i {
     visibility: hidden;
     position: absolute;
     top: 2.8em;
     right: .8em;
 }
 
-.form-box small{
+.form-box small {
     visibility: hidden;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
 }
 
-.form-btn{
-    display: block;
+.form-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 2em;
     background-color: #FF8818;
@@ -153,7 +150,7 @@ body{
     cursor: pointer;
 }
 
-#overlay{
+#overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -163,7 +160,7 @@ body{
     pointer-events: none;
 }
 
-#overlay.active{
+#overlay.active {
     visibility: 1;
     pointer-events: all;
 }

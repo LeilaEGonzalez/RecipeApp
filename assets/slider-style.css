@@ -14,42 +14,37 @@ body {
 
 .slider-container {
     height:100%;
-    width: 20%;
+    width: 27%;
     position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+    overflow-x: hidden;
     background-color: #02D8D8;
     font-family: 'Miniver', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    transition: 1s;
 
 }
 
 .logo-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2.5em 5.5em;
+    width: 100%;
+    display:inline-block;
+    align-items: left;
+    margin: 2em;
+    padding-left: 12em;
     cursor: pointer;
 
 }
-.slider-logo {
-    font-size: 2em;
+.exit {
     color: azure;
-    
-}
-
-.slider-burger {
-    color: azure;
-    width: 2.5em;
-    height: 2.5em;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .slider-title {
     color: azure;
     font-size: 1.8em;
-    margin-left: 3em;
     text-decoration-line: underline;
     margin-bottom: 2em;
 }
@@ -64,13 +59,15 @@ ul .slider-opts {
 
 }
 
-li {
+.slider-container a {
     text-decoration: none;
     list-style: none;
     color: azure;
     font-size: 1.5em;
-    margin: 2em 3.5em;
+    margin: 1em 1em;
     cursor: pointer;
+    display: block;
+    transition: 0.3s;
 }
 
 .hover-underline-animation {
