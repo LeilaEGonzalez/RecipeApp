@@ -7,6 +7,9 @@ const sourceForm = document.querySelector("#source-form");
 const pictureForm = document.querySelector("#picture-form");
 const ingredientsForm = document.querySelector("#ingredients-form");
 
+const show = () => {
+    document.getElementById('sidebar').classList.toggle('active');
+}
 
 addButton.addEventListener("click", event => {
     event.preventDefault();
@@ -15,7 +18,8 @@ addButton.addEventListener("click", event => {
 
 const recipeForm = () => {
     document.body.innerHTML = form;
-}
+};
+
 const form = `    <div id="overlay"></div>
 <div class="modal-container" id="form-container">
             <div class="modal-header">
@@ -61,27 +65,6 @@ const form = `    <div id="overlay"></div>
         </form>
     </div>
 </div>`;
-
-
-sliderBurger.addEventListener('click', event => {
-    event.preventDefaul();
-    sliderMenu();
-})
-
-const sliderMenu = () => {
-    var hamburger = {
-      navToggle: document.querySelector('.nav-toggle'),
-      nav: document.querySelector('nav-corner'),
-      doToggle: function(e) {
-        e.preventDefault();
-        this.navToggle.classList.toggle('expanded');
-        this.nav.classList.toggle('expanded');
-      }
-    };
-    hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
-    hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
-  };
-
 
 
 

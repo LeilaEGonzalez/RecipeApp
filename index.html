@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/stylesheet.css" />
     <link rel="stylesheet" href="/assets/add-recipe-style-form.css" />
-    <!-- <link rel="stylesheet" href="/assets/slider-style.css" /> -->
     <title>Recipe App</title>
 </head>
 
@@ -15,15 +14,19 @@
     <nav class="nav">
         <div class="nav-slider-container" id="slider_burger">
             <div class="nav-title">Recipe App</div>
-            <div class="nav-toggle" id="nav_toggle">
-                <div class="nav-toggle-bar"></div>
-            </div>
-            <div class="nav-corner" id="burger_btn">
-                <ul>
-                    <li><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
-                    <li><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
-                    <li><a href="/recipes/recipe3.html">Ratatouille</a></li>
+            <div id="sidebar">
+                <div class="toggle-btn" onclick="show()">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <ul class="sidebar_ul">
+                    <li class="sidebar_li"><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
+                    <li class="sidebar_li"><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
+                    <li class="sidebar_li"><a href="/recipes/recipe3.html">Ratatouille</a></li>
+
+
                 </ul>
+
             </div>
         </div>
         <button id="add-btn" class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
