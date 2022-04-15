@@ -1,5 +1,5 @@
 const addButton = document.querySelector("#add-btn");
-const sliderBurger = document.querySelector("#burger-btn")
+const sliderBurger = document.querySelector("#slider_burger")
 const detailedRecipe = document.querySelector("#detailed-recipe");
 const modalForm = document.querySelector("#modal-form");
 const titleForm = document.querySelector("#title-form");
@@ -63,9 +63,12 @@ const form = `    <div id="overlay"></div>
 </div>`;
 
 
+sliderBurger.addEventListener('click', event => {
+    event.preventDefaul();
+    sliderMenu();
+})
 
-
-(function() {
+const sliderMenu = () => {
     var hamburger = {
       navToggle: document.querySelector('.nav-toggle'),
       nav: document.querySelector('nav-corner'),
@@ -77,7 +80,10 @@ const form = `    <div id="overlay"></div>
     };
     hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
     hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
-  }());
+  };
+
+
+
 
 modalForm.addEventListener("submit", event => {
     event.preventDefault();

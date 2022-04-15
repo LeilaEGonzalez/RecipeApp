@@ -25,7 +25,15 @@ nav {
   align-content: center;
   position: fixed;
 }
+.nav-slider-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
 
+}
+.nav-slider-container .nav-title{
+margin-left: 5em;
+}
 .nav-corner {
   -webkit-transition: left 0.5s ease;
   -moz-transition: left 0.5s ease;
@@ -47,6 +55,7 @@ nav {
 
 .nav-corner.expanded {
   left: 0;
+
 }
 
 .nav-corner ul {
@@ -58,6 +67,8 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  color:white;
+  text-decoration: none;
 }
 
 .nav-toggle {
