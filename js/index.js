@@ -1,5 +1,5 @@
 const addButton = document.querySelector("#add-btn");
-const sliderBurger = document.querySelector("#slider_burger")
+const sliderBurger = document.querySelector("#slider_burger");
 const detailedRecipe = document.querySelector("#detailed-recipe");
 const modalForm = document.querySelector("#modal-form");
 const titleForm = document.querySelector("#title-form");
@@ -8,16 +8,16 @@ const pictureForm = document.querySelector("#picture-form");
 const ingredientsForm = document.querySelector("#ingredients-form");
 
 const show = () => {
-    document.getElementById('sidebar').classList.toggle('active');
-}
+  document.getElementById("sidebar").classList.toggle("active");
+};
 
-addButton.addEventListener("click", event => {
-    event.preventDefault();
-    recipeForm();
+addButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  recipeForm();
 });
 
 const recipeForm = () => {
-    document.body.innerHTML = form;
+  document.body.innerHTML = form;
 };
 
 const form = `    <div id="overlay"></div>
@@ -66,48 +66,38 @@ const form = `    <div id="overlay"></div>
     </div>
 </div>`;
 
+modalForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  checkInputs();
+});
 
-
-modalForm.addEventListener("submit", event => {
-    event.preventDefault();
-    checkInputs();
-})
 const checkInputs = () => {
-    const titleValue = titleForm.value.trim();
-    const sourceValue = sourceForm.value.trim();
-    const ingredientsValue = ingredientsForm.value.trim();
+  validate(titleForm);
+  validate(sourceForm);
+  validate(ingredientsForm);
+};
 
-    if(titleValue === '') {
-        setErrorFor(titleForm, 'Cannot be blank!')
+const validate = (input) => {
+  const value = input.value.trim();
+  if (!value) {
+    setErrorFor(input, `${getFieldName(input)} cannot be blank`);
+  } else {
+    setSuccessFor(input);
+  }
+};
 
-    } else {
-        setSuccessFor(titleForm)
-    };
-    
-    if(sourceValue === '') {
-        setErrorFor(sourceForm, 'Cannot be blank!')
-
-    } else {
-        setSuccessFor(sourceForm)
-    };
-
-    if(ingredientsValue === '') {
-        setErrorFor(ingredientsForm, 'Cannot be blank!')
-
-    } else {
-        setSuccessFor(ingredientsForm)
-    };
-
-}
+const getFieldName = (input) => {
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+};
 
 const setErrorFor = (input, message) => {
-    const formBox = input.parentElement;
-    const small = formBox.querySelector('small');
-    small.innerText = message;
-    formBox.className = 'form-box error'
+  const formBox = input.parentElement;
+  const small = formBox.querySelector("small");
+  small.innerText = message;
+  formBox.className = "form-box error";
 };
 
 const setSuccessFor = (input) => {
-    const formBox = input.parentElement;
-    formBox.className = 'form-box success'
-}
+  const formBox = input.parentElement;
+  formBox.className = "form-box success";
+};
