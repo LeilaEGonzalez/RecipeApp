@@ -12,15 +12,16 @@
 
 <body>
     <nav class="nav">
-        <div class="nav-slider-container" id="slider_burger">
-            <div class="nav-title">Recipe App</div>
-            <div id="sidebar">
-                <div class="toggle-btn" onclick="show()">
-                    <span></span><span></span><span></span>
+        <div class="nav-container">
+            <div class="menu">
+                <div class="toggle-btn menu" id="toggle-btn"  aria-expanded="false">
                 </div>
+                <div class="nav-title"><a class="title-link" href="/index.html">Recipe App</a></div>
+            </div>
+            <div class="sidebar" id="sidebar" data-visible="false">
 
-                <ul class="sidebar_ul">
-                    <li class="sidebar_li"><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
+                <ul class="sidebar_ul" >
+                    <li class="sidebar_li "><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
                     <li class="sidebar_li"><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
                     <li class="sidebar_li"><a href="/recipes/recipe3.html">Ratatouille</a></li>
 

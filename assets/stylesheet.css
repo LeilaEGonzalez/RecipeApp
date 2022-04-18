@@ -14,6 +14,7 @@ body {
   visibility: 50%;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 nav {
@@ -25,73 +26,79 @@ nav {
   align-content: center;
   position: fixed;
 }
-#sidebar {
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  background: #2EC0C0;
-  left: -300px;
-  transition: .4s;
-}
-
-#sidebar ul li {
-  list-style: none;
-  color: #fff;
-  font-size: 20px;
-  padding: 26px 24px;
-}
-
-#sidebar .toggle-btn {
-  position: absolute;
-  top: 30px;
-  left: 330px;
-}
-
-.toggle-btn span {
-  width: 45px;
-  height: 4px;
-  background: #2EC0C0;
+.nav-container{
+  position: right;
   display: block;
-  margin-top: 4px;
-  cursor: pointer;
+  height: 1080px;
+  width: 25%;
+align-content: center;
+  
 }
-
-#sidebar.active {
-  left: 0;
-}
-
 .nav-title {
   font-family: 'Miniver', cursive;
   color: #2EC0C0;
   font-size: 2em;
-  text-align: center;
-  width: 100%;
-  margin-top: .7em;
-  margin-right: 7em;
+  display: block;
+  margin-top: .5em;
 }
-
-.hover-underline-animation {
-  display: inline-block;
+.title-link{
+  text-decoration: none !important;
+  color: #2EC0C0;
+  
+}
+.menu{
+  display: inline;
+  float:left;
   position: relative;
-  color: azure;
-}
-
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
+  align-items: center;
   width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: azure;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  cursor: pointer;
+  padding-top: 1em;
 }
 
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.toggle-btn{
+ display: block;
+ position: absolute;
+ background: url(/assets/img/burger.svg);
+ background-repeat: no-repeat;
+aspect-ratio: 1;
+ width: 2em;
+ height: 1.25em;
+ border: 0;
+ z-index: 9999;
+ top: 2rem;
+ left: 2rem;
+}
+.sidebar {
+  position: fixed;
+  inset: 0 15 0 0;
+  flex-direction: column;
+  height: 100%;
+  background: #2EC0C0;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: .4s;
+  padding: 3em 2em;
+}
+.sidebar[data-visible="true"]{
+  transform: translateX(0%);
+
+};
+.slidebar_ul{
+  text-decoration: none; 
+} 
+.sidebar_li{
+  margin-top: 4em;
+  list-style: none;
+}
+.sidebar_li a{
+  color: azure !important;
+  font-family: 'Miniver', cursive;
+  font-size: 1.4em;
+  text-decoration: none;
+  margin-top: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .add-recipe {
@@ -103,7 +110,7 @@ nav {
   box-shadow: 4px 4px 12px -1px rgba(0, 0, 0, 0.25);
   border-radius: 41px;
   border-style: none;
-  margin: 1em 3em;
+  margin: 2em 3em;
   cursor: pointer;
 }
 

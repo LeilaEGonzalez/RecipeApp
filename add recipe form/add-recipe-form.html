@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/add recipe form/add-recipe-style-form.css"/>
+    <link rel="stylesheet" href="/assets/add-recipe-style-form.css" />
     <title></title>
 </head>
+
 <body>
     <div id="overlay"></div>
     <div class="modal-container" id="form-container">
-                <div class="modal-header">
-            <div class="title">New Recipe</div>
+        <div class="modal-header">
+            <div class="modal-title">New Recipe</div>
             <button class="close-button">&times;</button>
         </div>
         <div class="modal-body">
             <form class="form" id="modal-form">
                 <div class="form-box">
-                <label>Title</label>
-                <input type="text" placeholder="Write Here..." id="title-form">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <i class="fa-solid fa-circle-check"></i>
-                <small>Error</small>
-            </div>
+                    <label>Title</label>
+                    <input type="text" placeholder="Write Here..." id="title-form">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <small>Error</small>
+                </div>
 
-            <div class="form-box">
-                <label>Source</label>
-                <input type="text" placeholder="Write Here..." id="source-form">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <i class="fa-solid fa-circle-check"></i>
-                <small>Error</small>
-            </div>
+                <div class="form-box">
+                    <label>Source</label>
+                    <input type="text" placeholder="Write Here..." id="source-form">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <small>Error</small>
+                </div>
 
-            <div class="form-box">
-                <label>Picture</label>
-                <input type="text" placeholder="" id="picture-form">
-                <i class="fa-solid fa-file-circle-plus"></i>
-                <i class="fa-solid fa-circle-check"></i>
-                <small>Error</small>
-            </div>
-
-            <div class="form-box">
-                <label>Ingredients</label>
-                <input class="ingredients-input" type="text" placeholder="Write Here..." id="ingredients-form">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <i class="fa-solid fa-circle-check"></i>
-                <small>Error</small>
-            </div>
-
-            <button class="form-btn">Submit</button>
+                
+                <div class="form-box">
+                    <label>Ingredients</label>
+                    <input type="text" placeholder="Write Here..." id="ingredients-form">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <small>Error</small>
+                </div>
+                
+                <div class="form-box">
+                    <label for="picture-recipe">Picture</label>
+                    <input type="file" id="recipe-image" name="file" accept="image/png, image/jpeg">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <small>Error</small>
+                </div>
+                <button class="form-btn">Submit</button>
 
             </form>
         </div>
     </div>
-    
+
 
 </body>
+<script type="module" src="/js/index.js"></script>
 <script src="https://kit.fontawesome.com/75cca890a8.js" crossorigin="anonymous"></script>
-<script src="/add recipe form/add-recipe-form.js"></script>
+
 </html>

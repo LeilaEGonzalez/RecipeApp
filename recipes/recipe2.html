@@ -6,22 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/recipes.css">
+    <link rel="stylesheet" href="/assets/stylesheet.css">
+    <link rel="stylesheet" href="/assets/add-recipe-style-form.css">
     <title>Croatian Bean Stew</title>
 </head>
 
 <body>
     <nav class="nav">
         <div class="nav-container">
-            <div class="nav-corner">
-                <img class="burger" src="/assets/img/burger.svg" alt="burger icon">
-                <p class="nav-title">Recipe App</p>
+            <div class="menu">
+                <div class="toggle-btn menu" id="toggle-btn"  aria-expanded="false">
+                </div>
+                <div class="nav-title"><a class="title-link" href="/index.html">Recipe App</a></div>
             </div>
-            <button class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
+            <div class="sidebar" id="sidebar" data-visible="false">
+
+                <ul class="sidebar_ul" >
+                    <li class="sidebar_li "><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
+                    <li class="sidebar_li"><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
+                    <li class="sidebar_li"><a href="/recipes/recipe3.html">Ratatouille</a></li>
+
+
+                </ul>
+
+            </div>
         </div>
+        <button id="add-btn" class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
     </nav>
     <main>
         <div class="recipe-container">
-            <img class="soup-img" src="/assets/img/stew.png" alt="">
+            <img class="food-img" src="/assets/img/stew.png" alt="">
             <div class="text-container">
                 <div class="title-recipe" style="color: #FFC123;">Croatian Bean Stew</div>
                 <div class="ingredients">
