@@ -36,10 +36,9 @@ align-content: center;
 }
 .nav-title {
   font-family: 'Miniver', cursive;
-  color: #2EC0C0;
   font-size: 2em;
   display: block;
-  margin-top: .5em;
+  margin-top: .2em;
 }
 .title-link{
   text-decoration: none !important;

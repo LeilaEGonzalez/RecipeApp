@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/recipes.css">
     <link rel="stylesheet" href="/assets/stylesheet.css">
     <link rel="stylesheet" href="/assets/add-recipe-style-form.css">
-    <title>Croatian Bean Stew</title>
+    <title id="indexTitle"></title>
 </head>
 
 <body>
@@ -35,35 +35,36 @@
     </nav>
     <main>
         <div class="recipe-container">
-            <img class="food-img" src="/assets/img/stew.png" alt="">
+            <img class="food-img" src="" id="imgRecipe" alt="">
             <div class="text-container">
-                <div class="title-recipe" style="color: #FFC123;">Croatian Bean Stew</div>
+                <div class="title-recipe" id="recipeTitle"></div>
                 <div class="ingredients">
                     <h2 class="ingredients-title">Ingredients</h2>
                     <ul class="ingredients-list">
-                        <li class="each-ing">2 cans Cannellini Beans</li>
-                        <li class="each-ing">3 tbs Vegetable Oil</li>
-                        <li class="each-ing">4 tbs Vegetable Oil</li>
-                        <li class="each-ing">2 cups Tomatoes</li>
-                        <li class="each-ing">5 Challots</li>
-                        <li class="each-ing">2 cloves Garlic</li>
-                        <li class="each-ing">Pinch Parsley</li>
-                        <li class="each-ing">1/2 kg chopped Chorizo</li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
+                        <li class="each-ing" id="ingredient"></li>
                     </ul>
 
                 </div>
                 <div class="instructions-container">
                     <h2 class="instructions-title">Instructions</h2>
-                    <p class="instructions-description">Heat the oil in a pan.
-                        Add the chopped vegetables and sauté until tender.<br>
-                        Take a pot, empty the beans together with the vegetables into it, put the sausages inside and cook for further 20 minutes on a low heat.
-                        Or, put it in an oven and bake it at a temperature of 180ºC/350ºF for 30 minutes.<br>
-                        This dish is even better reheated the next day.
+                    <p class="instructions-description" id="instructionsForRecipe">
                     </p>
                 </div>
             </div>
         </div>
     </main>
 </body>
-<script type="module" src="/js/index.js"></script>
+<script src="/js/localStorage.js"></script>
+<script src="/js/recipes.js"></script>
+<script src="/js/detailRecipe.js"></script>
+<script src="/js/nav.js"></script>
 </html>
