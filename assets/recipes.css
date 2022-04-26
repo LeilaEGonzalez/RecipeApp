@@ -34,7 +34,7 @@ body {
     font-family: 'Miniver', cursive;
     font-size: 3em;
     color: #C02E2E;
-    margin-left: 5.5em;
+    text-align: center;
 }
 .ingredients-title, .instructions-title {
     font-family: 'Miniver', cursive;
@@ -52,8 +52,8 @@ font-family: "Montserrat", sans-serif;
 color:#757575
 }
 .each-ing{
-    margin-bottom: .5em;
-    list-style: square;
+
+    list-style: none;
 
 }
 .instructions-title{

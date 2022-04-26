@@ -90,13 +90,14 @@
               <div class="form-box">
                 <label>Ingredients</label>
                 <div id="ingredients-form">
-                  <div id="ingredient-row-0">
+                  <div class="ingredients-input" id="ingredient-row-0">
                     <input
                       type="text"
                       placeholder="Write Here..."
                       id="ingredient-input-0"
                     />
                     <button
+                    class="add-ingredient-btn"
                       type="button"
                       onclick="handleAddIngredient()"
                       id="ingredient-add"
@@ -114,10 +115,13 @@
                 <label for="picture-recipe">Picture</label>
                 <input
                   type="file"
+                  multiple="false"
                   id="recipe-image"
                   name="file"
-                  accept="image/png, image/jpeg"
+                  accept="image/*"
+              
                 />
+
                 <i class="fa-solid fa-file-circle-plus"></i>
                 <i class="fa-solid fa-circle-check"></i>
                 <small>Error</small>

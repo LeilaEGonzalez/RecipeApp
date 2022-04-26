@@ -1,5 +1,4 @@
 const indexTitle = document.querySelector("#indexTitle");
-const imgOFDetailRecipe = document.querySelector("#imgRecipe");
 const titleOfDetailRecipe = document.querySelector("#recipeTitle");
 const ingredientsOfDetailRecipe = document.querySelector("#ingredientsList");
 const instructionsOfDetailRecipe = document.querySelector(
@@ -11,6 +10,15 @@ const recipeID = parseInt(params.get("id"));
 
 const ingredientHTML = (ingredient, index) =>
   `<li class="each-ing" id="ingredient-${index}">${ingredient}</li>`;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const recentImageDataUrl = localStorage.getItem("recent-image");
+  if (recentImageDataUrl) {
+    document
+      .querySelector("#imgRecipe")
+      .setAttribute("src", recentImageDataUrl);
+  }
+});
 
 const showRecipeDetail = (recipeID) => {
   const recipe = getRecipeByID(recipeID);

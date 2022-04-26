@@ -6,11 +6,14 @@
   background-color: #fff9f3;
   display: block;
   width: 30%;
-  top: 17vh;
+  top: 10vh;
   left: 70vh;
   border-radius: 1em;
   height: 70%;
   z-index: 10;
+  margin-top: 1em;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-header {
@@ -40,6 +43,41 @@
   margin: 0.5em;
 }
 
+.ingredients-input, .new-row-ingredient{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+  margin-bottom: 1em;
+}
+
+.add-ingredient-btn {
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none;
+  background-color: #ff8818;
+  color: azure;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  padding: .1em .4em;
+  border-radius: 2em;
+  margin: .2em 0 1em 1em;
+
+}
+
+.delete-btn{
+  cursor: pointer;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none;
+  background-color: #ff8818;
+  color: azure;
+  font-family: "Montserrat", sans-serif;
+  padding: .5em 1em;
+  border-radius: .5em;
+  margin: .5em .5em .5em 1em ;
+}
 .modal-body {
   padding: 0 2.1em;
 }
@@ -56,6 +94,7 @@
   margin-right: 110em;
   margin-bottom: 0.3em;
 }
+
 
 .form-box input,
 .form-box textarea {

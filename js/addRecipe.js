@@ -25,6 +25,15 @@ closeButton.addEventListener("click", (event) => {
   event.preventDefault();
   closeRecipeForm();
 });
+recipeImage.addEventListener("change", function () {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    localStorage.setItem("recent-image", reader.result);
+  });
+
+  reader.readAsDataURL(this.files[0]);
+});
+
 // --------------- FORM -------------- //
 
 let lastIngredientRowID = 0;
@@ -61,8 +70,8 @@ const getIngredientValues = () => {
 const checkInputs = () => {
   const title = validate(titleForm);
   const instructions = validate(instructionsForm);
-  const image = recipeImage.files[0];
   const ingredients = getIngredientValues();
+  const image = recipeImage.value;
   const isValid = title && instructions && ingredients.length > 0;
   if (isValid)
     handleNewRecipe({
@@ -111,12 +120,12 @@ const deleteIngredientRow = (rowID) => {
 };
 
 const ingredientRow = (rowID) => {
-  return `<div id="ingredient-row-${rowID}">
+  return `<div class="new-row-ingredient" id="ingredient-row-${rowID}">
             <input
               type="text"
               placeholder="Write Here..."
               id="ingredient-input-${rowID}"
             />
-            <button type="button" onclick="deleteIngredientRow(${rowID})" id="ingredient-delete-${rowID}">delete</button>
+            <button class="delete-btn" type="button" onclick="deleteIngredientRow(${rowID})" id="ingredient-delete-${rowID}">Delete</button>
           </div>`;
 };
