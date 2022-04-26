@@ -15,10 +15,12 @@ const renderRecipes = () => {
 const addRecipe = (recipe) => {
   const recipes = getRecipesFromLocalStorage();
   const recipesLastID = getItemLocalStorage(recipesLastIDKey, 0);
-  const newRecipe = { ...recipe, id: recipesLastID + 1 };
+  const newID = recipesLastID + 1;
+  const newRecipe = { ...recipe, id: newID };
   recipes.push(newRecipe);
   setItemToLocalStorage(savedRecipeKey, recipes);
-  setItemToLocalStorage(recipesLastIDKey, recipesLastID + 1);
+  setItemToLocalStorage(recipesLastIDKey, newID);
+  return newID;
 };
 
 const getRecipeByID = (recipeID) => {

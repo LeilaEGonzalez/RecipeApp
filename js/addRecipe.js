@@ -3,7 +3,7 @@
 const addButton = document.querySelector("#add-btn");
 const modalForm = document.querySelector("#modal-form");
 const titleForm = document.querySelector("#title-form");
-const sourceForm = document.querySelector("#source-form");
+const instructionsForm = document.querySelector("#instructions-form");
 const ingredientsForm = document.querySelector("#ingredients-form");
 const modalContainer = document.querySelector("#modalContainer");
 const recipeImage = document.querySelector("#recipe-image");
@@ -27,6 +27,8 @@ closeButton.addEventListener("click", (event) => {
 });
 // --------------- FORM -------------- //
 
+let lastIngredientRowID = 0;
+
 const getFieldName = (input) => {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 };
@@ -43,23 +45,39 @@ const validate = (input) => {
 };
 
 const handleNewRecipe = (recipe) => {
-  addRecipe(recipe);
-  showNewRecipe(recipe);
+  const recipeID = addRecipe(recipe);
+  showNewRecipe({ ...recipe, id: recipeID });
+};
+
+const getIngredientValues = () => {
+  const inputs = document.querySelectorAll("#ingredients-form input");
+  const values = [];
+  inputs.forEach((input) => {
+    values.push(input.value);
+  });
+  return values;
 };
 
 const checkInputs = () => {
   const title = validate(titleForm);
-  const source = validate(sourceForm);
-  const ingredients = validate(ingredientsForm);
+  const instructions = validate(instructionsForm);
   const image = recipeImage.files[0];
-  const isValid = title && source && ingredients;
-  if (isValid) handleNewRecipe({ title, source, ingredients, image });
+  const ingredients = getIngredientValues();
+  const isValid = title && instructions && ingredients.length > 0;
+  if (isValid)
+    handleNewRecipe({
+      title,
+      instructions,
+      image,
+      ingredients,
+    });
 };
 
 // --------------- UI -------------- //
 
 const showRecipeForm = () => {
   modalContainer.style.display = "block";
+  lastIngredientRowID = 0;
 };
 
 const closeRecipeForm = () => {
@@ -80,4 +98,25 @@ const setSuccessFor = (input) => {
 
 const showNewRecipe = (recipe) => {
   siderbarUl.insertAdjacentHTML("beforeend", sideMenuHTML(recipe));
+};
+
+const handleAddIngredient = () => {
+  const ingredientHTML = ingredientRow(++lastIngredientRowID);
+  ingredientsForm.insertAdjacentHTML("beforeend", ingredientHTML);
+};
+
+const deleteIngredientRow = (rowID) => {
+  const row = document.getElementById(`ingredient-row-${rowID}`);
+  row.remove();
+};
+
+const ingredientRow = (rowID) => {
+  return `<div id="ingredient-row-${rowID}">
+            <input
+              type="text"
+              placeholder="Write Here..."
+              id="ingredient-input-${rowID}"
+            />
+            <button type="button" onclick="deleteIngredientRow(${rowID})" id="ingredient-delete-${rowID}">delete</button>
+          </div>`;
 };

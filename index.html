@@ -1,95 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/stylesheet.css" />
     <link rel="stylesheet" href="/assets/add-recipe-style-form.css" />
     <title>Recipe App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="nav">
-        <div class="nav-container">
-            <div class="menu">
-                <div class="toggle-btn menu" id="toggle-btn"  aria-expanded="false">
-                </div>
-                <div class="nav-title"><a class="title-link" href="/index.html">Recipe App</a></div>
-            </div>
-            <div class="sidebar" id="sidebar" data-visible="false">
-
-                <ul class="sidebar_ul" id="siderbarUl" >
-                    <li class="sidebar_li"><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
-                    <li class="sidebar_li"><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
-                    <li class="sidebar_li"><a href="/recipes/recipe3.html">Ratatouille</a></li>
-
-
-                </ul>
-
-            </div>
+      <div class="nav-container">
+        <div class="menu">
+          <div
+            class="toggle-btn menu"
+            id="toggle-btn"
+            aria-expanded="false"
+          ></div>
+          <div class="nav-title">
+            <a class="title-link" href="/index.html">Recipe App</a>
+          </div>
         </div>
-        <button id="add-btn" class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
+        <div class="sidebar" id="sidebar" data-visible="false">
+          <ul class="sidebar_ul" id="siderbarUl">
+            <li class="sidebar_li">
+              <a href="/recipes/recipe1.html">Mushroom Soup</a>
+            </li>
+            <li class="sidebar_li">
+              <a href="/recipes/recipe2.html">Croatian Bean Stew</a>
+            </li>
+            <li class="sidebar_li">
+              <a href="/recipes/recipe3.html">Ratatouille</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button
+        id="add-btn"
+        class="add-recipe"
+        data-modal-target="#form-container"
+      >
+        Add Recipe
+      </button>
     </nav>
     <main>
-        <div class="container">
-            <div class="title">What are you feelin' cooking today?</div>
-            <img src="/assets/img/food-hero.png" alt="food marble table" class="hero">
-        </div>
-        <div id="modalContainer" style="display: none;">
-            <div id="overlay"></div>
-            <div class="modal-container" id="form-container">
-                <div class="modal-header">
-                    <div class="modal-title">New Recipe</div>
-                    <button class="close-button" id="closeBtn">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <form class="form" id="modal-form">
-                        <div class="form-box">
-                            <label>Title</label>
-                            <input type="text" placeholder="Write Here..." id="title-form">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                            <i class="fa-solid fa-circle-check"></i>
-                            <small>Error</small>
-                        </div>
-            
-                        <div class="form-box">
-                            <label>Source</label>
-                            <input type="text" placeholder="Write Here..." id="source-form">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                            <i class="fa-solid fa-circle-check"></i>
-                            <small>Error</small>
-                        </div>
-            
-                        
-                        <div class="form-box">
-                            <label>Ingredients</label>
-                            <input type="text" placeholder="Write Here..." id="ingredients-form">
-                            <i class="fa-solid fa-circle-exclamation"></i>
-                            <i class="fa-solid fa-circle-check"></i>
-                            <small>Error</small>
-                        </div>
-                        
-                        <div class="form-box">
-                            <label for="picture-recipe">Picture</label>
-                            <input type="file" id="recipe-image" name="file" accept="image/png, image/jpeg">
-                            <i class="fa-solid fa-file-circle-plus"></i>
-                            <i class="fa-solid fa-circle-check"></i>
-                            <small>Error</small>
-                        </div>
-                        <button class="form-btn">Submit</button>
-            
-                    </form>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-<script src="/js/localStorage.js"></script>
-<script src="/js/recipes.js"></script>
-<script src="/js/addRecipe.js"></script>
-<script src="/js/nav.js"></script>
-<script src="https://kit.fontawesome.com/75cca890a8.js" crossorigin="anonymous"></script>
+      <div class="container">
+        <div class="title">What are you feelin' cooking today?</div>
+        <img
+          src="/assets/img/food-hero.png"
+          alt="food marble table"
+          class="hero"
+        />
+      </div>
+      <div id="modalContainer" style="display: none">
+        <div id="overlay"></div>
+        <div class="modal-container" id="form-container">
+          <div class="modal-header">
+            <div class="modal-title">New Recipe</div>
+            <button class="close-button" id="closeBtn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form class="form" id="modal-form">
+              <div class="form-box">
+                <label>Title</label>
+                <input
+                  type="text"
+                  placeholder="Write Here..."
+                  id="title-form"
+                />
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <small>Error</small>
+              </div>
 
+              <div class="form-box">
+                <label>Instructions</label>
+                <textarea
+                  rows="4"
+                  type="text"
+                  placeholder="Write Here..."
+                  id="instructions-form"
+                ></textarea>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <small>Error</small>
+              </div>
+
+              <div class="form-box">
+                <label>Ingredients</label>
+                <div id="ingredients-form">
+                  <div id="ingredient-row-0">
+                    <input
+                      type="text"
+                      placeholder="Write Here..."
+                      id="ingredient-input-0"
+                    />
+                    <button
+                      type="button"
+                      onclick="handleAddIngredient()"
+                      id="ingredient-add"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <small>Error</small>
+              </div>
+
+              <div class="form-box">
+                <label for="picture-recipe">Picture</label>
+                <input
+                  type="file"
+                  id="recipe-image"
+                  name="file"
+                  accept="image/png, image/jpeg"
+                />
+                <i class="fa-solid fa-file-circle-plus"></i>
+                <i class="fa-solid fa-circle-check"></i>
+                <small>Error</small>
+              </div>
+              <button class="form-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/js/localStorage.js"></script>
+  <script src="/js/recipes.js"></script>
+  <script src="/js/addRecipe.js"></script>
+  <script src="/js/nav.js"></script>
+  <script
+    src="https://kit.fontawesome.com/75cca890a8.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/recipes.css">
-    <link rel="stylesheet" href="/assets/stylesheet.css">
-    <link rel="stylesheet" href="/assets/add-recipe-style-form.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/recipes.css" />
+    <link rel="stylesheet" href="/assets/stylesheet.css" />
+    <link rel="stylesheet" href="/assets/add-recipe-style-form.css" />
     <title id="indexTitle"></title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="nav">
-        <div class="nav-container">
-            <div class="menu">
-                <div class="toggle-btn menu" id="toggle-btn"  aria-expanded="false">
-                </div>
-                <div class="nav-title"><a class="title-link" href="/index.html">Recipe App</a></div>
-            </div>
-            <div class="sidebar" id="sidebar" data-visible="false">
-
-                <ul class="sidebar_ul" id="siderbarUl" >
-                    <li class="sidebar_li "><a href="/recipes/recipe1.html">Mushroom Soup</a></li>
-                    <li class="sidebar_li"><a href="/recipes/recipe2.html">Croatian Bean Stew</a></li>
-                    <li class="sidebar_li"><a href="/recipes/recipe3.html">Ratatouille</a></li>
-
-
-                </ul>
-
-            </div>
+      <div class="nav-container">
+        <div class="menu">
+          <div
+            class="toggle-btn menu"
+            id="toggle-btn"
+            aria-expanded="false"
+          ></div>
+          <div class="nav-title">
+            <a class="title-link" href="/index.html">Recipe App</a>
+          </div>
         </div>
-        <button id="add-btn" class="add-recipe" data-modal-target="#form-container">Add Recipe</button>
+        <div class="sidebar" id="sidebar" data-visible="false">
+          <ul class="sidebar_ul" id="siderbarUl">
+            <li class="sidebar_li">
+              <a href="/recipes/recipe1.html">Mushroom Soup</a>
+            </li>
+            <li class="sidebar_li">
+              <a href="/recipes/recipe2.html">Croatian Bean Stew</a>
+            </li>
+            <li class="sidebar_li">
+              <a href="/recipes/recipe3.html">Ratatouille</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button
+        id="add-btn"
+        class="add-recipe"
+        data-modal-target="#form-container"
+      >
+        Add Recipe
+      </button>
     </nav>
     <main>
-        <div class="recipe-container">
-            <img class="food-img" src="" id="imgRecipe" alt="">
-            <div class="text-container">
-                <div class="title-recipe" id="recipeTitle"></div>
-                <div class="ingredients">
-                    <h2 class="ingredients-title">Ingredients</h2>
-                    <ul class="ingredients-list">
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                        <li class="each-ing" id="ingredient"></li>
-                    </ul>
-
-                </div>
-                <div class="instructions-container">
-                    <h2 class="instructions-title">Instructions</h2>
-                    <p class="instructions-description" id="instructionsForRecipe">
-                    </p>
-                </div>
-            </div>
+      <div class="recipe-container">
+        <img class="food-img" src="" id="imgRecipe" alt="" />
+        <div class="text-container">
+          <div class="title-recipe" id="recipeTitle"></div>
+          <div class="ingredients">
+            <h2 class="ingredients-title">Ingredients</h2>
+            <ul class="ingredients-list" id="ingredientsList"></ul>
+          </div>
+          <div class="instructions-container">
+            <h2 class="instructions-title">Instructions</h2>
+            <p class="instructions-description" id="instructionsForRecipe"></p>
+          </div>
         </div>
+      </div>
     </main>
-</body>
-<script src="/js/localStorage.js"></script>
-<script src="/js/recipes.js"></script>
-<script src="/js/detailRecipe.js"></script>
-<script src="/js/nav.js"></script>
+  </body>
+  <script src="/js/localStorage.js"></script>
+  <script src="/js/recipes.js"></script>
+  <script src="/js/detailRecipe.js"></script>
+  <script src="/js/nav.js"></script>
 </html>
