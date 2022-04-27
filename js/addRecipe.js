@@ -19,6 +19,7 @@ addButton.addEventListener("click", (event) => {
 modalForm.addEventListener("submit", (event) => {
   event.preventDefault();
   checkInputs();
+  closeModal();
 });
 
 closeButton.addEventListener("click", (event) => {
@@ -128,4 +129,8 @@ const ingredientRow = (rowID) => {
             />
             <button class="delete-btn" type="button" onclick="deleteIngredientRow(${rowID})" id="ingredient-delete-${rowID}">Delete</button>
           </div>`;
+};
+
+const closeModal = () => {
+  modalContainer.style.display = "none";
 };
